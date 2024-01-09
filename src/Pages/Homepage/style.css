@@ -34,12 +34,35 @@
     text-align: center;
 }
 
+.ad-icon-center svg {
+    width: 65px;
+    height: 65px;
+}
+
 .text-count {
     font-size: 50px;
     line-height: 1.2em;
 }
 
-.ad-partners img {
+.ad-partners figure {
+    display: flex;
+    justify-content: center;
+}
+
+.ad-partners figure img {
     max-height: 30px;
     min-height: 30px;
+}
+
+.ad-partners .slick-dots {
+    left: 0;
+    bottom: -40px;
+}
+
+.ad-partners .slick-dots li {
+    margin: 0 2px;
+}
+
+.ad-partners .slick-dots li button:before {
+    font-size: 15px;
 }

@@ -71,3 +71,33 @@
     width: 18px;
     height: 18px;
 }
+
+@media (max-width: 991px) {
+    .ad-footer .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .ad-footer aside {
+        width: 33.33%;
+    }
+
+    .ad-footer aside:first-child {
+        width: 100%;
+        margin-bottom: 45px;
+    }
+}
+
+@media (max-width: 991px) {
+    .ad-footer {
+        padding: 35px 0 25px 0;
+    }
+    .ad-footer aside {
+        width: 100%;
+        margin-bottom: 45px;
+    }
+
+    .ad-footer aside:last-child {
+        margin-bottom: 0;
+    }
+}

@@ -1,29 +1,26 @@
-// import { createBrowserRouter, RouterProvider } from "react-router-dom";
-//import { Root } from "./Pages/Root/Root";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import { Root } from "./Pages/Root/Root";
 import Homepage from "./Pages/Homepage/Homepage";
-import Header from "./Components/Header/Header";
-import {Footer} from "./Components/Footer/Footer";
+import Contact from "./Pages/Contact/Contact";
 
-// const router = createBrowserRouter(
-//     {
-//         path: '/',
-//         element: <Root />,
-//         children:[
-//             { path: true, element: <Homepage /> }
-//         ]
-//     }
-// )
+const router = createBrowserRouter ([
+    {
+        path: '/',
+        element: <Root />,
+        children:[
+            { index: true, element: <Homepage /> },
+            { path: '/contact', element: <Contact /> }
+        ]
+    }
+])
+
 
 function App() {
   return (
-    // <RouterProvider router={router} />
-      <>
-        <Header />
-          <div className="content-main">
-            <Homepage />
-          </div>
-          <Footer />
-      </>
+      <HelmetProvider>
+            <RouterProvider router={router} />
+     </HelmetProvider>
   );
 }
 
